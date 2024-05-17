@@ -1,0 +1,23 @@
+{
+  "name": "reactjs",
+  "version": "1.0.0",
+  "description": "This is a react app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishyadav1989/reactjs.git"
+  },
+  "keywords": [],
+  "author": "Manish Kumar Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishyadav1989/reactjs/issues"
+  },
+  "homepage": "https://github.com/manishyadav1989/reactjs#readme",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}
