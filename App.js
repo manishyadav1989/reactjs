@@ -1,9 +1,12 @@
+import React from "react"
+import ReactDom from "react-dom/client";
+
 const heading = React.createElement(
     "div",
     {id:"parent", className:"parent"}, 
     React.createElement(
         "div",
-        {id:"child", className:"child"}, 
+        {id:"child", className:"child"},
         React.createElement(
             "h1",
             {id:"heading", className:"heading"}, 
@@ -12,5 +15,5 @@ const heading = React.createElement(
     )
 );
 console.log(heading);
-const MainApp = ReactDOM.createRoot(document.getElementById('app'));
+const MainApp = ReactDom.createRoot(document.getElementById('app'));
 MainApp.render(heading);
