@@ -12,7 +12,7 @@ const resData =  [
                       ],
                       "avgRating": 4.4,
                       "parentId": "148383",
-                      "avgRatingString": "4.4",
+                      "avgRatingString": "5",
                       "totalRatingsString": "1K+",
                       "sla": {
                         "deliveryTime": 27,
@@ -198,7 +198,7 @@ const resData =  [
                       ],
                       "avgRating": 4.1,
                       "parentId": "170654",
-                      "avgRatingString": "4.1",
+                      "avgRatingString": "2",
                       "totalRatingsString": "1K+",
                       "sla": {
                         "deliveryTime": 32,
@@ -605,7 +605,7 @@ const resData =  [
                         "Fast Food",
                         "Snacks"
                       ],
-                      "avgRating": 4.3,
+                      "avgRating": 1,
                       "veg": true,
                       "parentId": "14909",
                       "avgRatingString": "4.3",
