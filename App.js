@@ -1,5 +1,6 @@
 import React, {lazy, Suspense, useState, useEffect} from "react"
 import ReactDom from "react-dom/client";
+import { Provider } from "react-redux";
 import Header from './src/components/Header';
 import Body from './src/components/Body';
 import About from './src/components/About';
@@ -9,6 +10,8 @@ import PageError from "./src/components/PageError";
 import "./style.css";
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import UserContext from "./src/utils/userContext";
+import store from "./src/redux/store";
+import Cart from "./src/components/Cart";
 
 const Grocery = lazy(() => import('./src/components/Grocery'));
 
@@ -22,10 +25,12 @@ const AppLayout = () => {
     },[])
     return (
         <div className="app">
-            <UserContext.Provider value={{loggedInUser: usreName, setUserName}}>
-                <Header />
-                <Outlet />
-            </UserContext.Provider>
+            <Provider store={store}>
+                <UserContext.Provider value={{loggedInUser: usreName, setUserName}}>
+                    <Header />
+                    <Outlet />
+                </UserContext.Provider>
+            </Provider>
         </div>
     )
 }
@@ -54,6 +59,10 @@ const routerConfig = createBrowserRouter([
             {
                 path: "/list/:id",
                 element: <Restaurant />
+            },
+            {
+                path: "/cart",
+                element: <Cart />
             }
         ]
     }

@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react';
 import useOnlineStatus from './../utils/useOnlineStatus';
 import UserContext from '../utils/userContext';
+import { addItem, removeItem } from './../redux/cartSlice'
+import { useDispatch } from 'react-redux';
 
 const RestaurantList = (props) => {
+    const dispatch = useDispatch();
     const onlineStatus = useOnlineStatus();
     if(!onlineStatus) return(<h1>Opps! You have lost your internet connection. Please check your connection and retry.</h1>)
     
@@ -21,6 +24,12 @@ const RestaurantList = (props) => {
                     <p>{cuisines}</p> 
                     <p>{areaName}</p> 
                     <p>Username : {loggedInUser}</p>
+                </div>
+                <div>
+                    <button className="p-4 m-4 rounded-lg shadow-md bg-black text-white size-16 w-auto hover:shadow-slate-500 cursor-pointer" onClick={()=> dispatch(addItem(props))}>Add Items</button>
+                </div>
+                <div>
+                    <button className="p-4 m-4 rounded-lg shadow-md bg-black text-white size-16 w-auto hover:shadow-slate-500 cursor-pointer" onClick={()=> dispatch(removeItem())}>Remove Items</button>
                 </div>
             </div>
         </div>
