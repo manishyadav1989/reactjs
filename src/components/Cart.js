@@ -6,9 +6,7 @@ const Cart = () => {
     return (
         <div className="flex flex-wrap w-6/12">
             { cartItems.length == 0 ? 'Cart is empty' : '' }
-            { cartItems.map((item) => {
-                return <RestaurantList key={item.data.info.id} data={item.data}/>
-            })}
+            { cartItems.map((item) => <RestaurantList key={item.data.info.id} data={item.data}/>)}
         </div>
     );
 }
