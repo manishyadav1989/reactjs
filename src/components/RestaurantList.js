@@ -14,7 +14,7 @@ const RestaurantList = (props) => {
     const  { id, name, cloudinaryImageId, avgRatingString, cuisines, areaName } = props.data.info;
     return (
         <div className="item m-4 p-4 w-[250px] bg-cyan-100 shadow-sm">
-            <div className="card">
+            <div className="card" data-testid="restaurant-card">
                 <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} alt="Avatar" style={{"width":"100%"}} />
                 <div className="details">
                     <h4 className="font-bold py-4">

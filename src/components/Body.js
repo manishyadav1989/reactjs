@@ -16,7 +16,7 @@ const Body = () => {
     return (
         <div className="container">
             <div className="search m-4 p-4">
-                <input type="text" className="inputBox border border-solid border-black" name="search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+                <input type="text" className="inputBox border border-solid border-black" data-testid="searchInput" name="search" value={searchText} onChange={(e) => setSearchText(e.target.value)} />
                 <button className="btnClass m-4 px-4 py-2 bg-green-100" onClick={()=>{
                     const updateResData = resData.filter((data) => {
                         return data.info.name.toLowerCase().includes(searchText.toLowerCase())
